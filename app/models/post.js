@@ -11,11 +11,17 @@ export default class PostModel extends Model {
   @computed('comments.@each.authors'/*, 'comments.isFulfilled' */)
   get authors() {
     console.log('post#authors comments fulfilled', this.comments.isFulfilled);
-    return this.comments.map((c) => c.get('authors'));
+    return this.comments.reduce(
+      (authors, comment) => [...authors, ...comment.get('authors').toArray()],
+      []
+    );
   }
 
   get authorsTracked() {
     console.log('post#authorsTracked comments fulfilled', this.comments.isFulfilled);
-    return this.comments.map((c) => c.get('authors'));
+    return this.comments.reduce(
+      (authors, comment) => [...authors, ...comment.get('authors').toArray()],
+      []
+    );
   }
 }
