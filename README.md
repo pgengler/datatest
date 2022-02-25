@@ -6,7 +6,7 @@ This is an attempt to reproduce a bug seen moving from 3.27 to 3.28 of ember-dat
 where computed properties dependent upon async relationships no longer recompute once
 those relationships are fulfilled. 
 
-Run the app, open it, view the console to see the loggin in the computed property
+Run the app, open it, view the console to see the logging in the computed property
 on `Post` that depends upon the `comments` async relationship. It logs once.
 
 If you uncomment `comments.isFulfilled` as a dependent key, it will recompute and
@@ -16,7 +16,7 @@ once not fulfilled and once fulfilled.
 
 ## Secondary Issue
 
-When authors do load, the value of the attributes are not working in the template
+When authors do load, for the CP version only, the value of the attributes are not working in the template
 
 ---
 
