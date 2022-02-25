@@ -18,6 +18,12 @@ once not fulfilled and once fulfilled.
 
 When authors do load, for the CP version only, the value of the attributes are not working in the template
 
+
+## 3.27 Ember Data
+
+Branch `ember-data-327` is the same application with Ember Data 3.27, both of the
+above issues do not exist on this branch
+
 ---
 
 
