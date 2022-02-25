@@ -1,7 +1,9 @@
 {{page-title "Datatest"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
 {{outlet}}
+<h1>Post {{this.model.id}}</h1>
+<h5>Comments</h5>
+{{!-- {{#each this.model.authorsTracked as |author|}} --}}
+{{#each this.model.authors as |author|}}
+  {{author.id}}
+{{/each}}
