@@ -4,7 +4,7 @@
 
 This is an attempt to reproduce a bug seen moving from 3.27 to 3.28 of ember-data (while on 3.28 of ember-source)
 where computed properties dependent upon async relationships no longer recompute once
-those relationships are fulfilled. 
+those relationships are fulfilled.
 
 Run the app, open it, view the console to see the logging in the computed property
 on `Post` that depends upon the `comments` async relationship. It logs once.
@@ -12,7 +12,7 @@ on `Post` that depends upon the `comments` async relationship. It logs once.
 If you uncomment `comments.isFulfilled` as a dependent key, it will recompute and
 you will see the authors load.
 If you change the template to use `this.model.authorsTracked` it will log twice,
-once not fulfilled and once fulfilled. 
+once not fulfilled and once fulfilled.
 
 ## Secondary Issue
 

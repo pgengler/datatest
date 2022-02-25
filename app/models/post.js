@@ -10,7 +10,7 @@ export default class PostModel extends Model {
 
   @computed('comments.@each.authors'/*, 'comments.isFulfilled' */)
   get authors() {
-    console.log('post#authors comments fulfilled', this.comments.isFulfilled);
+    console.log('post#authors: comments.isFulfilled=%s', this.comments.isFulfilled);
     return this.comments.reduce(
       (authors, comment) => [...authors, ...comment.get('authors').toArray()],
       []
