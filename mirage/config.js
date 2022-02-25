@@ -36,4 +36,5 @@ function routes() {
 
   this.get('/posts/:id');
   this.get('/comments/:id');
+  this.get('/authors/:id');
 }
