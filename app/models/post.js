@@ -8,14 +8,14 @@ export default class PostModel extends Model {
   @hasMany
   comments;
 
-  @computed('comments.@each.author'/*, 'comments.isFulfilled' */)
+  @computed('comments.@each.authors'/*, 'comments.isFulfilled' */)
   get authors() {
     console.log('post#authors comments fulfilled', this.comments.isFulfilled);
-    return this.comments.map((c) => c.get('author'));
+    return this.comments.map((c) => c.get('authors'));
   }
 
   get authorsTracked() {
     console.log('post#authorsTracked comments fulfilled', this.comments.isFulfilled);
-    return this.comments.map((c) => c.get('author'));
+    return this.comments.map((c) => c.get('authors'));
   }
 }
